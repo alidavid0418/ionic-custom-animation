@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
+import { customAlertEnter } from '../customAlertEnter';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private alert: AlertController) {}
 
+  async showAlert() {
+    const alert = await this.alert.create({
+      header: 'My custom alert',
+      message: 'This is so epic',
+      buttons: ['OK'],
+      enterAnimation: customAlertEnter
+    });
+    alert.present();
+  }
 }
