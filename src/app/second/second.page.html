@@ -1,9 +1,20 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>second</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>second page</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle @slidelefttitle>awesome subtitle</ion-card-subtitle>
+      <ion-card-title @slidelefttitle>my animated card</ion-card-title>
+    </ion-card-header>
+    <ion-card-content @fadein>
+      <img src="https://i.imgur.com/pfJeWLw.jpg">
+    </ion-card-content>
+  </ion-card>
 </ion-content>
